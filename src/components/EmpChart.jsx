@@ -1,31 +1,25 @@
 import React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 
-const chartSetting = {
-    xAxis: [
-      {
-        label: 'City',
-      },
-    ]
-  };
-  const dataset = [
-    {
-      count: 99,
-      city: 'Gwenborough',
-    },
-    {
-      count: 144,
-      city: 'Wisokyburgh',
-    },
-    {
-      count: 249,
-      city: 'McKenziehaven',
-    },
-    {
-      count: 25,
-      city: 'Roscoeview',
-    }
-  ];
+const dataset = [
+  {
+    count: 99,
+    city: 'Gwenborough',
+  },
+  {
+    count: 144,
+    city: 'Wisokyburgh',
+  },
+  {
+    count: 249,
+    city: 'McKenziehaven',
+  },
+  {
+    count: 25,
+    city: 'Roscoeview',
+  }
+];
+
 const valueFormatter = (value) => `${value}`;
 
 const EmpChart = (props) => {

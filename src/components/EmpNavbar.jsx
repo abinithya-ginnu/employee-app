@@ -16,7 +16,7 @@ const EmpNavbar = () => {
           >
             <Person4 />
         </IconButton>
-        <Navbar.Brand as={Link} to={"/employee-app"}>Employee Site</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/employee-app/home">Employee Site</Navbar.Brand>
         <Nav className="me-auto">
             <Nav.Link to="/employee-app/home" as={Link}>Home</Nav.Link>
             <Nav.Link to="/employee-app/dashboard" as={Link}>Dashboard</Nav.Link>
