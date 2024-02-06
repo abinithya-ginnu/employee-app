@@ -29,6 +29,7 @@ function App() {
       <EmpNavbar />
       <Routes>
         <Route path= '/' element = {<EmployeeDashboard />}></Route>
+        <Route path= '/employee-app' element = {<EmployeeDashboard />}></Route>
         <Route path= '/dashboard' element = {<EmployeeDashboard />}></Route>
         <Route path= '/addemployee' element = {<EmployeeForm />}></Route>
       </Routes>

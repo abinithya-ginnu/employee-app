@@ -17,7 +17,7 @@ const EmpCarousel = (props) => {
   return (
       <Carousel style={{ height: 400 }}>
         {props.data.map((row, index) => (
-            <Carousel.Item>
+            <Carousel.Item key={index}>
               <div className="d-flex justify-content-center"> 
               <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" height={200} src={profileImgDict[index]} />

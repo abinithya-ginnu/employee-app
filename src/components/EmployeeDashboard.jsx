@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, styled, tableCellClasses } from '@mui/material';
+import { Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, styled, tableCellClasses } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import EmpCarousel from './EmpCarousel';
