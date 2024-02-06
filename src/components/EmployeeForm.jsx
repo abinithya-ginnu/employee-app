@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import Copyright from './Copyright';
 
 const EmployeeForm = () => {
-  var [input, setInput] = useState({name: "", designation: "", location: "", salary: 0 });
+  var [input, setInput] = useState({name: "", designation: "", location: "", salary: "" });
   const inputHandler = (e) =>{
     const {name, value} = e.target;
     setInput({...input, [name]: value});
