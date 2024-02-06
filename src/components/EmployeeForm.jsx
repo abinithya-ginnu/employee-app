@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,14 +11,14 @@ import Typography from '@mui/material/Typography';
 import Copyright from './Copyright';
 
 const EmployeeForm = () => {
-  
+  var [input, setInput] = useState({name: "", designation: "", location: "", salary: 0 });
+  const inputHandler = (e) =>{
+    const {name, value} = e.target;
+    setInput({...input, [name]: value});
+    console.log(value);
+}
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
   };
 
   return (
@@ -64,6 +64,8 @@ const EmployeeForm = () => {
                 name="name"
                 autoComplete="name"
                 autoFocus
+                value={input.name}
+                onChange={inputHandler}
               />
               <TextField
                 margin="normal"
@@ -73,6 +75,8 @@ const EmployeeForm = () => {
                 label="Designation"
                 id="designation"
                 autoComplete="designation"
+                value={input.designation}
+                onChange={inputHandler}
               />
               <TextField
                 margin="normal"
@@ -82,6 +86,8 @@ const EmployeeForm = () => {
                 label="Location"
                 id="location"
                 autoComplete="location"
+                value={input.location}
+                onChange={inputHandler}
               />
                <TextField
                 margin="normal"
@@ -92,6 +98,8 @@ const EmployeeForm = () => {
                 id="salary"
                 type='number'
                 autoComplete="salary"
+                value={input.salary}
+                onChange={inputHandler}
               /> 
               <Button
                 type="submit"
