@@ -28,10 +28,10 @@ function App() {
       <CssBaseline />
       <EmpNavbar />
       <Routes>
-        <Route path= '/' element = {<EmployeeDashboard />}></Route>
         <Route path= '/employee-app' element = {<EmployeeDashboard />}></Route>
-        <Route path= '/dashboard' element = {<EmployeeDashboard />}></Route>
-        <Route path= '/addemployee' element = {<EmployeeForm />}></Route>
+        <Route path= '/employee-app/dashboard' element = {<EmployeeDashboard />}></Route>
+        <Route path= '/employee-app/home' element = {<EmployeeDashboard />}></Route>
+        <Route path= '/employee-app/addemployee' element = {<EmployeeForm />}></Route>
       </Routes>
     </ThemeProvider>
     </div>
