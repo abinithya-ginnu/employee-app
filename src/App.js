@@ -1,23 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import EmployeeDashboard from './components/EmployeeDashboard';
+import EmployeeForm from './components/EmployeeForm';
+import { Route, Routes } from 'react-router-dom';
+import EmpNavbar from './components/EmpNavbar';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <EmpNavbar />
+      <Routes>
+        <Route path= '/' element = {<EmployeeDashboard />}></Route>
+        <Route path= '/dashboard' element = {<EmployeeDashboard />}></Route>
+        <Route path= '/addemployee' element = {<EmployeeForm />}></Route>
+      </Routes>
+    </ThemeProvider>
     </div>
   );
 }
